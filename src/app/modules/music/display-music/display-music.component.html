@@ -1,0 +1,14 @@
+<div class="music">
+  <h2>
+    Music:
+  </h2>
+  <ul>
+    <li *ngFor="let music of music">
+      <p>{{music.id + 1}}. {{music.title}}: {{music.artist}}</p>
+      <!-- <a href='{{ music.url}}'>{{ music.title}}</a> -->
+      <div id='video' style="position:relative;height: 0;padding-bottom:56.25%">
+        <iframe width="560" height="315" [src]="getUrl(music)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </li>
+  </ul>
+</div>
