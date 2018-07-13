@@ -11,13 +11,15 @@ export class DisplayMovieComponent implements OnInit {
   @Input() movie: Movie;
   @Output() movieDeleted: EventEmitter<number> = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onClickDelete() {
     this.movieDeleted.emit(this.movie.id);
   }
 
+  onClickView() {
+   window.open(this.movie.image_url);
+  }
 }

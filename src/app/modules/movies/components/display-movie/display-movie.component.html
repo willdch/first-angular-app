@@ -6,4 +6,7 @@
     {{movie.id + 1}}. {{movie.title}}: {{movie.director}}
   </p>
   <img [src]='movie.image_url' />
+  <div id="viewButton">
+  <button (click)="onClickView()">View</button>
+</div>
 </div>
