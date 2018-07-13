@@ -28,4 +28,15 @@ getMovies() {
     this.getMovies();
   }
 
+  onMovieDeleted(movieId) {
+    let movieIndex = 0;
+    for(let movie of this.movies) {
+      if(movie.id === movieId) {
+        this.movies.splice(movieIndex, 1);
+        break;
+      }
+      movieIndex++;
+    }
+  }
+
 }
